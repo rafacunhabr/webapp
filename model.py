@@ -1,7 +1,7 @@
 '''
 Created on 15/01/2013
 
-@author: rafael.cunha
+@author: kalunga
 '''
 from mongoengine import *
 from mongodb import Core

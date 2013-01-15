@@ -1,7 +1,7 @@
 '''
 Created on 04/01/2013
 
-@author: rafael.cunha
+@author: kalunga
 '''
 from flask import Flask, render_template, make_response, Flask, session, redirect, url_for, escape, request
 from model import *
@@ -25,6 +25,7 @@ def index():
     if 'username' in session:
         username = session['username']
         user1 = ''
+        app.logger.warning('esta inicializado? ' + str(Core.is_initialized()))
         Core.initialize()
         for user in User.objects(first_name = username):
             user1 = user
